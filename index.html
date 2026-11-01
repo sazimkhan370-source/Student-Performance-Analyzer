@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <div class="tag">AI MINI PROJECT</div>
+            <h1>Student Performance Analyzer</h1>
+            <p>Enter student marks to calculate results and predict academic performance.</p>
+        </header>
+
+        <section class="card">
+            <h2>Student Details</h2>
+            {% if error %}
+                <div class="error">{{ error }}</div>
+            {% endif %}
+            <form method="POST">
+                <div class="form-grid">
+                    <label>Student Name
+                        <input type="text" name="name" placeholder="Enter student name" required>
+                    </label>
+                    <label>Roll Number
+                        <input type="text" name="roll_number" placeholder="Enter roll number" required>
+                    </label>
+                </div>
+
+                <h2 class="subject-heading">Enter Marks (out of 100)</h2>
+                <div class="form-grid">
+                    <label>English
+                        <input type="number" name="English" min="0" max="100" step="0.5" required>
+                    </label>
+                    <label>Mathematics
+                        <input type="number" name="Mathematics" min="0" max="100" step="0.5" required>
+                    </label>
+                    <label>Computer
+                        <input type="number" name="Computer" min="0" max="100" step="0.5" required>
+                    </label>
+                    <label>Science
+                        <input type="number" name="Science" min="0" max="100" step="0.5" required>
+                    </label>
+                    <label>Hindi
+                        <input type="number" name="Hindi" min="0" max="100" step="0.5" required>
+                    </label>
+                </div>
+                <button type="submit">Analyze Performance</button>
+            </form>
+        </section>
+        <p class="note">Demo note: the prediction uses a Decision Tree model trained on generated example marks.</p>
+    </main>
+</body>
+</html>

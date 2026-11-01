@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f5fb;
+    color: #202b3c;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: 40px auto;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 7px 13px;
+    border-radius: 20px;
+    background: #e2eaff;
+    color: #2454b8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin: 14px 0 8px;
+    color: #18376d;
+    font-size: clamp(27px, 5vw, 38px);
+}
+
+.hero p, .note {
+    color: #66738a;
+    line-height: 1.6;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(31, 55, 100, 0.08);
+}
+
+h2 {
+    margin-top: 0;
+    color: #243f70;
+    font-size: 21px;
+}
+
+.subject-heading {
+    margin-top: 28px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: bold;
+    color: #394960;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d5ddea;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #b8ccff;
+    border-color: #527bd4;
+}
+
+button, .button-link {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: #2859bd;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover, .button-link:hover {
+    background: #1c438f;
+}
+
+.error {
+    margin-bottom: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff0f0;
+    color: #a52828;
+}
+
+.student-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-bottom: 28px;
+}
+
+.student-details div, .summary-box {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.student-details span, .summary-box span, .prediction span {
+    color: #68768b;
+    font-size: 13px;
+}
+
+.student-details strong {
+    font-size: 17px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 25px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e8edf5;
+}
+
+th {
+    background: #f5f7fc;
+    color: #30476f;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.summary-box {
+    padding: 16px;
+    background: #f3f6fc;
+    border-radius: 10px;
+}
+
+.summary-box strong {
+    color: #214fa9;
+    font-size: 22px;
+}
+
+.prediction {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #eaf7ef;
+}
+
+.prediction strong {
+    display: block;
+    margin-top: 7px;
+    color: #167342;
+    font-size: 25px;
+}
+
+.prediction p {
+    margin-bottom: 0;
+    color: #537362;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.note {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+@media (max-width: 600px) {
+    .form-grid, .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .container {
+        margin: 24px auto;
+    }
+}
